@@ -34,8 +34,8 @@ Ensure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/link-client.git
-   cd link-client
+   git clone https://github.com/mhhabib/Linkshare.git
+   cd Linkshare && cd link-client
    ```
 
 2. Install the dependencies:

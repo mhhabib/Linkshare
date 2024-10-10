@@ -34,8 +34,8 @@ To run this project, you'll need to have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/link-api.git
-   cd link-api
+   git clone https://github.com/mhhabib/Linkshare.git
+   cd Linkshare && cd link-api
    ```
 
 2. Install dependencies:
@@ -79,7 +79,7 @@ The server will be running on `http://localhost:8000`.
 ```
 link-api
 ├── config
-│   ├── authController.js  
+│   ├── authController.js
 │   ├── linkController.js
 │   └── userController.js
 ├── middlewares
