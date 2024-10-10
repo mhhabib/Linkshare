@@ -1,10 +1,12 @@
-Here's a summarized README for the parent directory (`link-share`), linking to the individual README files for more detailed instructions:
-
----
-
 # Link Sharing Application
 
 This is a full-stack link-sharing application that allows users to manage and share social media links through a user-friendly interface. The project is split into two parts: the **backend (API)** and the **frontend (client)**. The backend handles user authentication, link management, and profile features, while the frontend provides a responsive user interface for users to interact with the API.
+
+<div align="center">
+
+[![Video Title](https://img.icons8.com/ios-filled/50/000000/video.png)](https://github.com/user-attachments/assets/e1fcd8ea-e0db-438d-bb38-9a7fb57b4e56)
+
+</div>
 
 ## Project Structure
 
