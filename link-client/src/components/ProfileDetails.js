@@ -68,7 +68,7 @@ const ProfileDetails = () => {
 			fetchUserProfile();
 		} catch (error) {
 			console.error('Error updating profile:', error);
-			showErrorToast('Error updating profile. Please try again.'); // Error toast
+			showErrorToast(error.response?.data?.error || 'Error saving the link');
 		}
 	};
 

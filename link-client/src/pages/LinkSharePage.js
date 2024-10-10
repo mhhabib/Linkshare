@@ -9,22 +9,22 @@ const LinkSharePage = () => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 	const { username } = useParams();
-	const fetchUserProfile = async () => {
-		try {
-			const response = await axios.get(
-				`http://localhost:8000/api/users/${username}`
-			);
-			setUserProfile(response.data);
-			setLoading(false);
-		} catch (err) {
-			setError('Failed to fetch user profile');
-			setLoading(false);
-		}
-	};
 
 	useEffect(() => {
+		const fetchUserProfile = async () => {
+			try {
+				const response = await axios.get(
+					`http://localhost:8000/api/users/${username}`
+				);
+				setUserProfile(response.data);
+				setLoading(false);
+			} catch (err) {
+				setError('Failed to fetch user profile');
+				setLoading(false);
+			}
+		};
 		fetchUserProfile();
-	}, []);
+	}, [username]);
 
 	if (loading)
 		return (

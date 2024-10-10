@@ -1,1 +1,12 @@
 .DS_Store
+
+# Ignore node_modules from link-api and link-client
+link-api/node_modules/
+link-client/node_modules/
+
+# Ignore .env file in link-api
+link-api/.env
+
+# Ignore contents of uploads folder but keep the folder itself
+link-api/uploads/*
+!link-api/uploads/.gitkeep  # Optional: to keep the folder itself in version control

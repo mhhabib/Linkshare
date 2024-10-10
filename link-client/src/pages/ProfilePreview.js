@@ -16,25 +16,24 @@ const ProfilePreview = () => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-	const fetchUserProfile = async () => {
-		try {
-			const response = await axios.get(
-				'http://localhost:8000/api/users/profile',
-				{
-					headers: {
-						Authorization: `Bearer ${token}`,
-					},
-				}
-			);
-			setUserProfile(response.data);
-			setLoading(false);
-		} catch (err) {
-			setError('Failed to fetch user profile');
-			setLoading(false);
-		}
-	};
-
 	useEffect(() => {
+		const fetchUserProfile = async () => {
+			try {
+				const response = await axios.get(
+					'http://localhost:8000/api/users/profile',
+					{
+						headers: {
+							Authorization: `Bearer ${token}`,
+						},
+					}
+				);
+				setUserProfile(response.data);
+				setLoading(false);
+			} catch (err) {
+				setError('Failed to fetch user profile');
+				setLoading(false);
+			}
+		};
 		if (token) {
 			fetchUserProfile();
 		}

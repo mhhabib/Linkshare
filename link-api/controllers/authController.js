@@ -31,6 +31,12 @@ exports.login = async (req, res) => {
 exports.updateProfile = async (req, res) => {
 	const { firstName, lastName, email } = req.body;
 	const profilePicture = req.file ? req.file.path : null;
+	if (!firstName || !lastName || !email) {
+		return res
+			.status(400)
+			.json({ error: 'All fields (firstName, lastName, email) are required' });
+	}
+
 	try {
 		const user = await User.findByIdAndUpdate(
 			req.user.id,

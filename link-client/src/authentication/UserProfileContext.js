@@ -29,8 +29,25 @@ export const UserProfileProvider = ({ children }) => {
 	};
 
 	useEffect(() => {
+		const fetchProfile = async () => {
+			try {
+				const response = await axios.get(
+					'http://localhost:8000/api/users/profile',
+					{
+						headers: {
+							Authorization: `Bearer ${token}`,
+						},
+					}
+				);
+				setUserProfile(response.data);
+				setLoading(false);
+			} catch (err) {
+				setError('Failed to fetch user profile');
+				setLoading(false);
+			}
+		};
 		if (token) {
-			fetchUserProfile();
+			fetchProfile();
 		}
 	}, [token]);
 

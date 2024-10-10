@@ -6,7 +6,7 @@ import { platformColors } from '../utils/PlatformLink';
 
 const MobilePreview = () => {
 	const { userProfile, loading, error } = useUserProfile();
-
+	console.log("Preview: ", userProfile)
 	if (loading)
 		return (
 			<div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center p-4 bg-white rounded-lg">
